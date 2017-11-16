@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf925bf19f9cc804aa823efcb941eecd, type: 3}
-  m_Name: DefaultShoes
+  m_Name: Shoes
   m_EditorClassIdentifier: 
   name: DefaultShoes
   icon: {fileID: 0}

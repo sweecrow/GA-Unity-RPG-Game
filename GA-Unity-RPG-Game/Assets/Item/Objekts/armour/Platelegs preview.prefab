@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 23324076685201990}
   - component: {fileID: 33298853511140542}
   m_Layer: 0
-  m_Name: Platelegs
+  m_Name: Platelegs preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

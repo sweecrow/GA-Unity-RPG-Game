@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 23529480660058632}
   - component: {fileID: 33579157297225470}
   m_Layer: 0
-  m_Name: Platebody
+  m_Name: Platebody preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

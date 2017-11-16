@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf925bf19f9cc804aa823efcb941eecd, type: 3}
-  m_Name: DefaultPants
+  m_Name: Shirt
   m_EditorClassIdentifier: 
-  name: DefaultPants
+  name: DefaultShirt
   icon: {fileID: 0}
   isDefaultItem: 1
-  equipSlot: 2
-  mesh: {fileID: 137175310727962592, guid: 39dad6f0a5de4a041a3b73b1d1d63792, type: 2}
+  equipSlot: 1
+  mesh: {fileID: 137943110234501528, guid: 436911da7aa9a3c42a2a015628effe7c, type: 2}
   coveredMeshRegions: 
   armorModifier: 0
   damageModifer: 0
