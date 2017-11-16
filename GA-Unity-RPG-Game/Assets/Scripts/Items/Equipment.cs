@@ -6,6 +6,8 @@ using System.Collections.Generic;
 public class Equipment : Item {
 
     public EquipmentSlot equipSlot;
+    public SkinnedMeshRenderer mesh;
+    public EquipmentMeshRegion[] coveredMeshRegions;
 
     public int armorModifier;
     public int damageModifer;
@@ -20,3 +22,4 @@ public class Equipment : Item {
     }
 }
 public enum EquipmentSlot { Head, Cheast, Legs, Weapon, Shield, Feet }
+public enum EquipmentMeshRegion { Legs, Arms, Torso}; // hör ihop med body blendshapes
