@@ -1,13 +1,17 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class EquipmentManager : MonoBehaviour {
+/* Keep track of equipment. Has functions for adding and removing items. */
 
-    public static EquipmentManager instance;
+public class EquipmentManager : MonoBehaviour
+{
 
     #region Singleton
 
-    void Awake ()
+    public static EquipmentManager instance;
+
+    void Awake()
     {
         instance = this;
     }
@@ -19,10 +23,11 @@ public class EquipmentManager : MonoBehaviour {
     Equipment[] currentEquipment;   // Items we currently have equipped
     SkinnedMeshRenderer[] currentMeshes;
 
+    // Callback for when an item is equipped/unequipped
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
 
-    Inventory inventory;
+    Inventory inventory;    // Reference to our inventory
 
     void Start()
     {
@@ -61,6 +66,7 @@ public class EquipmentManager : MonoBehaviour {
         currentMeshes[slotIndex] = newMesh;
     }
 
+    // Unequip an item with a particular index
     public Equipment Unequip(int slotIndex)
     {
         // Only do this if an item is there
@@ -120,4 +126,5 @@ public class EquipmentManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.U))
             UnequipAll();
     }
+
 }
