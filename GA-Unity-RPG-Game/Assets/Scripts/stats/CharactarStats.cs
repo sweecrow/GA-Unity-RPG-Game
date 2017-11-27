@@ -5,22 +5,16 @@ using UnityEngine.UI;
 public class CharactarStats : MonoBehaviour {
 
     public int maxHealth = 100;
-    public int currentHealth { get; private set; }
-
-    public Text healthText; 
+    public int CurrentHealth { get; private set; }
 
     public stat damage;
     public stat armor;
-    //UI
-    void Start()
-    {
-        healthText = GetComponent<Text>();
-        //healthText.text = "Health:" + currentHealth.ToString();
-    }
-    //UI
+    
+    
+    
     void Awake()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
     }
 
     void Update()
@@ -29,6 +23,7 @@ public class CharactarStats : MonoBehaviour {
         {
             TakeDamage(10);
         }
+        
     }
 
     public void TakeDamage (int damage)
@@ -36,23 +31,18 @@ public class CharactarStats : MonoBehaviour {
         damage -= armor.GetValue();
         damage = Mathf.Clamp(damage, 0, int.MaxValue);
 
-        currentHealth -= damage;
+        CurrentHealth -= damage;
         Debug.Log(transform.name + "takes" + damage + "damages.");
 
-        //UI
-        healthText.text = "Health:" + currentHealth.ToString();
+        
 
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Die();
         }
     }
 
     
-    
-        
-    
-
     public virtual void Die()
     {
 

@@ -1,17 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class PlayerStats : CharactarStats {
+
+    public Text helthtext;
 
 	// Use this for initialization
 	void Start ()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+
+        helthtext.text = "Health: " + CurrentHealth.ToString();
 	}
 
-	// Update is called once per frame
-	void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
+    void Update()
+    {
+        helthtext.text = "Health: " + CurrentHealth.ToString();
+    }
+
+    // Update is called once per frame
+    void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
         if(newItem != null)
         {

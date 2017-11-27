@@ -8,7 +8,7 @@ public class EnemyStats : CharactarStats {
         base.Die();
 
         //Add death animation
-
+        
         Destroy(gameObject);
     }
 }
