@@ -473,7 +473,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107936766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250, y: 0, z: 250}
+  m_LocalPosition: {x: 250, y: 2.65, z: 312.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1062804853}
@@ -863,7 +863,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 213342688}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -0.0033217564}
+  m_LocalPosition: {x: -0, y: 0, z: 15.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1062804853}
@@ -2847,6 +2847,7 @@ GameObject:
   - component: {fileID: 954823572}
   - component: {fileID: 954823574}
   - component: {fileID: 954823575}
+  - component: {fileID: 954823576}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2909,6 +2910,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 107936766}
+--- !u!114 &954823576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 954823571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74570c74e4a3ae4dbf2f5e8ba9e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: wave1
+    enemy: {fileID: 400088, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
+    spawnCount: 2
+    spawnRate: 1
+    count: 0
+    rate: 0
+  - name: wave2
+    enemy: {fileID: 400088, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
+    spawnCount: 2
+    spawnRate: 2
+    count: 0
+    rate: 0
+  - name: wave3
+    enemy: {fileID: 400088, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
+    spawnCount: 2
+    spawnRate: 1
+    count: 0
+    rate: 0
+  nextWave: 0
+  timeBetweenWaves: 5
+  waveCountdown: 0
+  searchCountdown: 1
+  state: 2
 --- !u!1 &978729910
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,7 +4694,7 @@ GameObject:
   - component: {fileID: 1524308787}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4880,6 +4916,10 @@ Prefab:
     - target: {fileID: 100088, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
       propertyPath: m_Name
       value: Enemy graphics
+      objectReference: {fileID: 0}
+    - target: {fileID: 100088, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
