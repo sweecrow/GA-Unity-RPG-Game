@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerStats : CharactarStats {
 
     public Text helthtext;
+    
 
 	// Use this for initialization
 	void Start ()
@@ -13,6 +14,7 @@ public class PlayerStats : CharactarStats {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
 
         helthtext.text = "Health: " + CurrentHealth.ToString();
+        
 	}
 
     void Update()

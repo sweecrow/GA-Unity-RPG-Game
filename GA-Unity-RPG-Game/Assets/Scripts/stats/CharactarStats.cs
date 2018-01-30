@@ -9,9 +9,16 @@ public class CharactarStats : MonoBehaviour {
 
     public stat damage;
     public stat armor;
+
     
-    
-    
+
+
+
+    void Start()
+    {
+        
+    }
+
     void Awake()
     {
         CurrentHealth = maxHealth;
@@ -23,8 +30,16 @@ public class CharactarStats : MonoBehaviour {
         {
             TakeDamage(10);
         }
+
+
         
     }
+
+
+
+   
+
+
 
     public void TakeDamage (int damage)
     {
@@ -39,6 +54,8 @@ public class CharactarStats : MonoBehaviour {
         if (CurrentHealth <= 0)
         {
             Die();
+
+            
         }
     }
 
@@ -47,5 +64,6 @@ public class CharactarStats : MonoBehaviour {
     {
 
         Debug.Log(transform.name + "Deid.");
+        
     }
 }
