@@ -19,7 +19,7 @@ public class EnemyStats : CharactarStats {
         base.Die();
 
         
-
+       
         //Add death animation
         myAnimator.SetBool("IsDead", true);
         
