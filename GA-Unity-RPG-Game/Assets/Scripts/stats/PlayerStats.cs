@@ -10,7 +10,6 @@ public class PlayerStats : CharactarStats {
     public Text exptext;
     public Text requiredxp;
 
-    // Use this for initialization
     void Start ()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
@@ -26,9 +25,7 @@ public class PlayerStats : CharactarStats {
 
         
     }
-    /// <summary>
-    /// /////////////
-    /// </summary>
+    
     void RankUp()
     {
         level += 1;
@@ -44,6 +41,38 @@ public class PlayerStats : CharactarStats {
 
                 experienceRequired = 1000;
                 break;
+            case 3:
+
+                experienceRequired = 2000;
+                break;
+            case 4:
+
+                experienceRequired = 3200;
+                break;
+            case 5:
+
+                experienceRequired = 4600;
+                break;
+            case 6:
+
+                experienceRequired = 6200;
+                break;
+            case 7:
+
+                experienceRequired = 8000;
+                break;
+            case 8:
+
+                experienceRequired = 12000;
+                break;
+            case 9:
+
+                experienceRequired = 16000;
+                break;
+            case 10:
+
+                experienceRequired = 20000;
+                break;
         }
     }
 
@@ -51,11 +80,8 @@ public class PlayerStats : CharactarStats {
     {
         if (experience >= experienceRequired)
             RankUp();
-
     }
-    /// <summary>
-    /// ///////////
-    /// </summary>
+    
     void Update()
     {
         helthtext.text = "Health: " + CurrentHealth.ToString();
@@ -67,11 +93,14 @@ public class PlayerStats : CharactarStats {
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            experience += 100;
+            GiveExperience();
         }
+
+        
+
     }
 
-    // Update is called once per frame
+    
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
         if(newItem != null)
@@ -94,4 +123,6 @@ public class PlayerStats : CharactarStats {
         base.Die();
         PlayerManager.instance.KillPlayer();
     }
+
+    
 }

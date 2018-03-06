@@ -7,6 +7,8 @@ public class CharactarStats : MonoBehaviour {
     public int maxHealth = 100;
     public int CurrentHealth { get; private set; }
 
+    
+
     public stat damage;
     public stat armor;
 
@@ -15,14 +17,14 @@ public class CharactarStats : MonoBehaviour {
     public float experience;
     public float experienceRequired;
 
-    void Start()
+    
+    public void GiveExperience()
     {
-        
+        experience += 20;
     }
 
-    
 
-    
+
     //Level system stop
     void Awake()
     {
@@ -32,12 +34,6 @@ public class CharactarStats : MonoBehaviour {
     void Update()
     {
         
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(10);
-        }
- 
     }
 
     public void TakeDamage (int damage)
@@ -47,19 +43,17 @@ public class CharactarStats : MonoBehaviour {
 
         CurrentHealth -= damage;
         Debug.Log(transform.name + "takes" + damage + "damages.");
-
+        
         if (CurrentHealth <= 0)
         {
             Die();
             
         }
     }
-
+    
     
     public virtual void Die()
     {
-
         Debug.Log(transform.name + "Deid.");
-        
     }
 }

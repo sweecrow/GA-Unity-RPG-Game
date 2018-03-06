@@ -14,8 +14,15 @@ public class EnemyStats : CharactarStats {
          
     }
 
+    void Update()
+    {
+        
+    }
+
     public override void Die()
     {
+        
+
         base.Die();
 
         
