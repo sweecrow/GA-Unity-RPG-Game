@@ -1155,7 +1155,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1560139386313070, guid: 199a8dc2d2c0cf344a1c012e48fb6f73, type: 2}
   - {fileID: 1560139386313070, guid: 199a8dc2d2c0cf344a1c012e48fb6f73, type: 2}
-  spawnValues: {x: 100, y: 0, z: 100}
+  spawnValues: {x: 180, y: 0, z: 180}
   spawnWait: 0
   spawnMostWait: 30
   spawnLeastWait: 10
@@ -3836,7 +3836,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.32
+  orthographic size: 35
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
