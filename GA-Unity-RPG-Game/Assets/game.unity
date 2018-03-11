@@ -1128,12 +1128,12 @@ MonoBehaviour:
   - {fileID: 1065736643}
   spawnValues: {x: 180, y: 0, z: 180}
   spawnWait: 0
-  spawnMostWait: 30
-  spawnLeastWait: 10
+  spawnMostWait: 7
+  spawnLeastWait: 2
   startWait: 5
   stop: 0
   enemieCount: 0
-  enemieMaxCount: 20
+  enemieMaxCount: 30
 --- !u!4 &266563793
 Transform:
   m_ObjectHideFlags: 0

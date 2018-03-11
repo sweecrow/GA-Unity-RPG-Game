@@ -12,12 +12,15 @@ public class CharacterCombat : MonoBehaviour {
     public event System.Action OnAttack;
 
     CharactarStats myStats;
-    
+
+    Animator animi;
+
 
     void Start()
     {
         myStats = GetComponent<CharactarStats>();
-        
+
+        animi = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -38,6 +41,8 @@ public class CharacterCombat : MonoBehaviour {
             }
 
             attackCooldown = 1f / attackSpeed;
+
+            animi.SetTrigger("Attack");
         }
         
     }
@@ -49,5 +54,7 @@ public class CharacterCombat : MonoBehaviour {
         myStats.GiveExperience();
 
         stats.TakeDamage(myStats.damage.GetValue());
+
+        
     }
 }
