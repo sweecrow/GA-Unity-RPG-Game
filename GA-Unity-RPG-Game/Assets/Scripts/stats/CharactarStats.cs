@@ -7,8 +7,6 @@ public class CharactarStats : MonoBehaviour {
     public int maxHealth = 100;
     public int CurrentHealth { get; private set; }
 
-    
-
     public stat damage;
     public stat armor;
 
@@ -22,8 +20,6 @@ public class CharactarStats : MonoBehaviour {
     {
         experience += 20;
     }
-
-
 
     //Level system stop
     void Awake()
@@ -50,8 +46,8 @@ public class CharactarStats : MonoBehaviour {
             
         }
     }
-    
-    
+
+ 
     public virtual void Die()
     {
         Debug.Log(transform.name + "Deid.");

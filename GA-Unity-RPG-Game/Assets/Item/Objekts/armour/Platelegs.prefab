@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1527223189842112}
+  m_RootGameObject: {fileID: 1029181946906652}
   m_IsPrefabParent: 1
---- !u!1 &1527223189842112
+--- !u!1 &1029181946906652
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4685325645473578}
-  - component: {fileID: 137588030054755012}
+  - component: {fileID: 4945574447539228}
+  - component: {fileID: 137122087269453856}
   m_Layer: 0
   m_Name: Platelegs
   m_TagString: Untagged
@@ -27,25 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4685325645473578
+--- !u!4 &4945574447539228
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1527223189842112}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000000008691273, y: 0.018374318, z: 0.6035802}
+  m_GameObject: {fileID: 1029181946906652}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &137588030054755012
+--- !u!137 &137122087269453856
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1527223189842112}
+  m_GameObject: {fileID: 1029181946906652}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -53,10 +53,9 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
+  - {fileID: 2100000, guid: b2fdc1f8b080ad34da1c9aae20fb117f, type: 2}
   - {fileID: 2100000, guid: ed747b03afbd2ac4f8859b805e9e9967, type: 2}
   - {fileID: 2100000, guid: 5f88bcb7d2c677447b77a4b703ce5184, type: 2}
-  - {fileID: 2100000, guid: b2fdc1f8b080ad34da1c9aae20fb117f, type: 2}
-  - {fileID: 2100000, guid: 966e12582b87313469d2dd5c6946bda0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,6 +112,6 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.3472653, y: 0.00000020861626, z: 0.014912359}
-    m_Extent: {x: 0.48442113, y: 0.31254247, z: 0.14070758}
+    m_Center: {x: 0.32927305, y: -0.00000008940697, z: 0.00945507}
+    m_Extent: {x: 0.50228983, y: 0.32484344, z: 0.14894263}
   m_DirtyAABB: 0

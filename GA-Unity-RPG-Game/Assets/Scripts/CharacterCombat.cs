@@ -14,6 +14,7 @@ public class CharacterCombat : MonoBehaviour {
     CharactarStats myStats;
 
     Animator animi;
+    Animator anim;
 
 
     void Start()
@@ -21,11 +22,12 @@ public class CharacterCombat : MonoBehaviour {
         myStats = GetComponent<CharactarStats>();
 
         animi = GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
-        attackCooldown -= Time.deltaTime;    
+        attackCooldown -= Time.deltaTime;
     }
 
     public void Attack(CharactarStats targetStats)
@@ -43,6 +45,7 @@ public class CharacterCombat : MonoBehaviour {
             attackCooldown = 1f / attackSpeed;
 
             animi.SetTrigger("Attack");
+            anim.SetTrigger("Hit");
         }
         
     }
@@ -57,4 +60,6 @@ public class CharacterCombat : MonoBehaviour {
 
         
     }
+
+    
 }

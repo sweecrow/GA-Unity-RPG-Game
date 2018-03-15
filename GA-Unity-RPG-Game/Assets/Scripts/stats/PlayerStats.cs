@@ -36,6 +36,7 @@ public class PlayerStats : CharactarStats {
             case 1:
 
                 experienceRequired = 400;
+                
                 break;
             case 2:
 

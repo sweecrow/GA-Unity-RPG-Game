@@ -4,14 +4,17 @@ using System.Collections;
 
 public class EnemyStats : CharactarStats {
 
-    Animator myAnimator;
-   
+    //Animator myAnimator;
+    
+
     void Start()
     {
-        myAnimator = GetComponent<Animator>();
-        myAnimator.enabled = true;
+        //myAnimator = GetComponent<Animator>();
+        //myAnimator.enabled = true;
 
-         
+        
+
+
     }
 
     void Update()
@@ -21,6 +24,7 @@ public class EnemyStats : CharactarStats {
 
     public override void Die()
     {
+
         
 
         base.Die();
@@ -30,7 +34,7 @@ public class EnemyStats : CharactarStats {
         //Add death animation
         
 
-        myAnimator.SetBool("IsDead", true);
+        //myAnimator.SetBool("IsDead", true);
         
         Destroy(gameObject);
     }
