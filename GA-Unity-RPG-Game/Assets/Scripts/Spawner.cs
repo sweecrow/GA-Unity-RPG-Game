@@ -31,10 +31,7 @@ public class Spawner : MonoBehaviour {
         {
             stop = true;
         }
-        if(enemies == null)
-        {
-            stop = true;
-        }
+        
     }
 
     IEnumerator WaitSpawner()
@@ -52,6 +49,8 @@ public class Spawner : MonoBehaviour {
             enemieCount++;
 
             yield return new WaitForSeconds(spawnWait);
+
+            
         }
         
     }

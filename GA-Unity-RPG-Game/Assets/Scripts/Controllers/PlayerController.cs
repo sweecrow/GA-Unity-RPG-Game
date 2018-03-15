@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
                 motor.MoveToPoint(hit.point);    // Move our player to what we hit
+                
 
                 //Stop focusing any objekt
                 RemoveFocus();
@@ -70,10 +71,13 @@ public class PlayerController : MonoBehaviour {
 
             focus = newFocus;
             motor.FollowTarget(newFocus);
+            
         }
 
         
         newFocus.OnFocused(transform);
+
+        
         
     }
 
@@ -83,5 +87,6 @@ public class PlayerController : MonoBehaviour {
             focus.OnDefocused();
         focus = null;
         motor.StopFollowingTarget();
+        
     }
 }

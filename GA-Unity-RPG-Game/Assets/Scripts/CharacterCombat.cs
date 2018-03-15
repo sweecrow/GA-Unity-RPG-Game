@@ -46,6 +46,7 @@ public class CharacterCombat : MonoBehaviour {
 
             animi.SetTrigger("Attack");
             anim.SetTrigger("Hit");
+            FindObjectOfType<AudioManager>().Play("Attack");
         }
         
     }

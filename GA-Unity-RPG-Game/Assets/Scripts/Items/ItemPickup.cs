@@ -20,6 +20,10 @@ public class ItemPickup : Interactable {
         
 
         if (wasPickedUp)
+        {
+            FindObjectOfType<AudioManager>().Play("Pickup");
             Destroy(gameObject);
+        }
+            
     }
 }

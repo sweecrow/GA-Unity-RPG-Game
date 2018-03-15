@@ -44,6 +44,7 @@ public class EquipmentManager : MonoBehaviour
     // Equip a new item
     public void Equip(Equipment newItem)
     {
+        FindObjectOfType<AudioManager>().Play("Using");
         // Find out what slot the item fits in
         int slotIndex = (int)newItem.equipSlot;
         Equipment oldItem = Unequip(slotIndex);

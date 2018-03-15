@@ -22,7 +22,7 @@ public class CharactarStats : MonoBehaviour {
     
     public void GiveExperience()
     {
-        experience += 20;
+        experience += 40;
     }
 
     //Level system stop
@@ -48,6 +48,7 @@ public class CharactarStats : MonoBehaviour {
         
         if (CurrentHealth <= 0)
         {
+            FindObjectOfType<AudioManager>().Play("Death");
             Die();
             
         }

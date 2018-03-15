@@ -26,6 +26,7 @@ public class PlayerMotor : MonoBehaviour {
     public void MoveToPoint(Vector3 point)
     {
         agent.SetDestination(point);
+        //FindObjectOfType<AudioManager>().Play("RunGrass");
     }
 
     public void FollowTarget (Interactable newTarget)
@@ -42,6 +43,8 @@ public class PlayerMotor : MonoBehaviour {
         agent.updateRotation = true;
 
         target = null;
+
+        
     }
 
     void FaceTarget ()

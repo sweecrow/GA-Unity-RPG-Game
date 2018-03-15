@@ -42,39 +42,48 @@ public class PlayerStats : CharactarStats {
                 break;
             case 2:
 
-                experienceRequired = 1000;
+                experienceRequired = 600;
+                maxHealth += 5;
                 break;
             case 3:
 
-                experienceRequired = 2000;
+                experienceRequired = 1000;
+                maxHealth += 5;
                 break;
             case 4:
 
-                experienceRequired = 3200;
+                experienceRequired = 1500;
+                maxHealth += 5;
                 break;
             case 5:
 
-                experienceRequired = 4600;
+                experienceRequired = 2100;
+                maxHealth += 5;
                 break;
             case 6:
 
-                experienceRequired = 6200;
+                experienceRequired = 2800;
+                maxHealth += 5;
                 break;
             case 7:
 
-                experienceRequired = 8000;
+                experienceRequired = 3200;
+                maxHealth += 5;
                 break;
             case 8:
 
-                experienceRequired = 12000;
+                experienceRequired = 4000;
+                maxHealth += 5;
                 break;
             case 9:
 
-                experienceRequired = 16000;
+                experienceRequired = 5000;
+                maxHealth += 5;
                 break;
             case 10:
 
-                experienceRequired = 20000;
+                experienceRequired = 6300;
+                maxHealth += 5;
                 break;
         }
     }
