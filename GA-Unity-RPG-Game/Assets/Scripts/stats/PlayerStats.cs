@@ -25,7 +25,9 @@ public class PlayerStats : CharactarStats {
 
         
     }
+
     
+
     void RankUp()
     {
         level += 1;
@@ -97,11 +99,31 @@ public class PlayerStats : CharactarStats {
             GiveExperience();
         }
 
-        
+        if (CurrentHealth != maxHealth && !isRegenHealth)
+        {
+            StartCoroutine(RegainHealthOverTime());
+        }
 
     }
 
-    
+    private IEnumerator RegainHealthOverTime()
+    {
+        isRegenHealth = true;
+        while (CurrentHealth < maxHealth)
+        {
+            Healthregen();
+            yield return new WaitForSeconds(1);
+        }
+        isRegenHealth = false;
+    }
+
+    public void Healthregen()
+    {
+        CurrentHealth += healthReg;
+
+    }
+
+
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
         if(newItem != null)

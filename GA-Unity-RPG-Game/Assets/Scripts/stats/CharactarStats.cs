@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections;
 
 public class CharactarStats : MonoBehaviour {
 
     public int maxHealth = 100;
-    public int CurrentHealth { get; private set; }
+    public int CurrentHealth; //{ get; private set; }
+    public int healthReg;
+
+    public bool isRegenHealth;
+
 
     public stat damage;
     public stat armor;
@@ -31,6 +35,8 @@ public class CharactarStats : MonoBehaviour {
     {
         
     }
+
+    
 
     public void TakeDamage (int damage)
     {

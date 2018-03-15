@@ -31,6 +31,10 @@ public class Spawner : MonoBehaviour {
         {
             stop = true;
         }
+        if(enemies == null)
+        {
+            stop = true;
+        }
     }
 
     IEnumerator WaitSpawner()

@@ -356,6 +356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  CurrentHealth: 0
+  healthReg: 1
+  isRegenHealth: 0
   damage:
     baseValue: 5
   armor:
@@ -1142,9 +1145,9 @@ MonoBehaviour:
   - {fileID: 1065736643}
   spawnValues: {x: 180, y: 0, z: 180}
   spawnWait: 0
-  spawnMostWait: 7
-  spawnLeastWait: 2
-  startWait: 5
+  spawnMostWait: 1
+  spawnLeastWait: 0.5
+  startWait: 3
   stop: 0
   enemieCount: 0
   enemieMaxCount: 30
@@ -4546,6 +4549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  CurrentHealth: 0
+  healthReg: 0
+  isRegenHealth: 0
   damage:
     baseValue: 0
   armor:
@@ -5286,12 +5292,37 @@ Prefab:
     - target: {fileID: 114595535450742066, guid: 8724c7c9a397b724ea78ee8c18706bc7,
         type: 2}
       propertyPath: armor.baseValue
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114595535450742066, guid: 8724c7c9a397b724ea78ee8c18706bc7,
         type: 2}
       propertyPath: damage.baseValue
-      value: 6
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114718634462420888, guid: 8724c7c9a397b724ea78ee8c18706bc7,
+        type: 2}
+      propertyPath: radius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 95969311075323282, guid: 8724c7c9a397b724ea78ee8c18706bc7,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195762184483123788, guid: 8724c7c9a397b724ea78ee8c18706bc7,
+        type: 2}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595535450742066, guid: 8724c7c9a397b724ea78ee8c18706bc7,
+        type: 2}
+      propertyPath: isRegenHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195762184483123788, guid: 8724c7c9a397b724ea78ee8c18706bc7,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 1200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8724c7c9a397b724ea78ee8c18706bc7, type: 2}
