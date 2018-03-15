@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 126261106}
   - component: {fileID: 126261105}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Version Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,10 +804,10 @@ RectTransform:
   m_Father: {fileID: 660725997}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 613.4, y: -307}
-  m_SizeDelta: {x: 91.2, y: 14.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.599976, y: 12}
+  m_SizeDelta: {x: 91.20001, y: 14.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126261105
 MonoBehaviour:
