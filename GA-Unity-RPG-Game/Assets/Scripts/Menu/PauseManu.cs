@@ -8,7 +8,6 @@ public class PauseManu : MonoBehaviour {
 
     public GameObject pauseMenuUI;
 
-	// Update is called once per frame
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -42,7 +41,6 @@ public class PauseManu : MonoBehaviour {
 
     public void QuitGame()
     {
-        Debug.Log("Quitting game");
         Application.Quit();
     }
 }

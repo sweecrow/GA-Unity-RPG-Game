@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour {
 
     public void KillPlayer ()
     {
-        //Gameover screen
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

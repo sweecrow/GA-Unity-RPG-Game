@@ -23,10 +23,7 @@ public class PlayerStats : CharactarStats {
         exptext.text = "XP: " + experience.ToString();
         requiredxp.text = "RequiredXp: " + experienceRequired.ToString();
 
-        
     }
-
-    
 
     void RankUp()
     {

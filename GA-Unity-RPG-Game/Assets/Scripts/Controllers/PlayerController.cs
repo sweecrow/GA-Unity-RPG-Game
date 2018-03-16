@@ -6,23 +6,20 @@ public class PlayerController : MonoBehaviour {
 
     public Interactable focus;
 
-    public LayerMask movementMask; //Filter out everyting not walkable
+    public LayerMask movementMask;
 
-    Camera cam;         //Reference to our camera
-    PlayerMotor motor;      //Referance to our motor
+    Camera cam;         
+    PlayerMotor motor;      
 
-	// Use this for initialization
 	void Start () {
         cam = Camera.main;
         motor = GetComponent<PlayerMotor>();
 	}
 
-	// Update is called once per frame
 	void Update () {
 
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-
 
         if(Input.GetMouseButtonDown(0))
         {
@@ -31,28 +28,20 @@ public class PlayerController : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 100, movementMask))
             {
-                motor.MoveToPoint(hit.point);    // Move our player to what we hit
-                
-
-                //Stop focusing any objekt
+                motor.MoveToPoint(hit.point);
                 RemoveFocus();
-
             }
         }
 
-        // If we press right mouse
         if (Input.GetMouseButtonDown(1))
         {
-            // We create a ray
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, 100))
-            {
-                //check if we hit an interacible 
+            { 
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                //if we did set it as our focus
                 if (interactable != null)
                 {
                     SetFocus(interactable);
@@ -65,7 +54,6 @@ public class PlayerController : MonoBehaviour {
     {
         if(newFocus != focus)
         {
-
             if(focus != null)
                 focus.OnDefocused();
 
@@ -73,12 +61,8 @@ public class PlayerController : MonoBehaviour {
             motor.FollowTarget(newFocus);
             
         }
-
-        
         newFocus.OnFocused(transform);
 
-        
-        
     }
 
     void RemoveFocus ()
